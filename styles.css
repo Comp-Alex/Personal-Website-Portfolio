@@ -699,21 +699,83 @@ footer {
 
 .certifications-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
   margin-bottom: 40px;
 }
 
-.certifications-cards .detail-card:nth-child(1) {
-  transform: rotate( 0deg);
+.certifications-cards .detail-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
 }
 
-.certifications-cards .detail-card:nth-child(2) {
-  transform: rotate( 0deg);
-}
-
+.certifications-cards .detail-card:nth-child(1),
+.certifications-cards .detail-card:nth-child(2),
 .certifications-cards .detail-card:nth-child(3) {
   transform: rotate(0deg);
+}
+
+.cert-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+  background: rgba(64, 233, 171, 0.06);
+  border: 1px solid rgba(64, 233, 171, 0.18);
+  border-radius: 14px;
+  padding: 20px;
+  min-height: 180px;
+}
+
+.cert-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 260px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.cert-image:hover {
+  box-shadow: 0 12px 35px rgba(64, 233, 171, 0.3);
+  transform: scale(1.02);
+}
+
+.cert-placeholder {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.cert-placeholder span {
+  color: #40e9ab;
+  font-weight: 700;
+  font-size: 1.05em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cert-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cert-summary {
+  margin: 0;
+  color: #d9f7e3;
+  line-height: 1.75;
+}
+
+.cert-details p {
+  margin: 0;
+  line-height: 1.6;
 }
 
 .detail-card {
@@ -799,18 +861,24 @@ footer {
 }
 
 .project-collage {
-  position: relative;
-  height: 350px;
-  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(64, 233, 171, 0.05), rgba(40, 200, 150, 0.05));
+  border: 2px solid rgba(64, 233, 171, 0.2);
+  border-radius: 12px;
+  min-height: 300px;
 }
 
 .collage-img {
-  position: absolute;
   max-width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  object-fit: cover;
+  object-fit: contain;
   border: 2px solid rgba(64, 233, 171, 0.3);
   transition: all 0.3s ease;
 }
@@ -818,40 +886,34 @@ footer {
 .collage-img:hover {
   box-shadow: 0 15px 50px rgba(64, 233, 171, 0.4);
   border-color: rgba(64, 233, 171, 0.6);
-  z-index: 50;
-  transform: scale(1.3);
+  transform: scale(1.05);
 }
 
-/* Pile-up collage layout */
+/* Folder-style gallery layout */
 .collage-main {
-  position: absolute;
-  top: 0;
-  width: 85%;
-  height: 300px;
-  bottom: 0;
-  left: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 280px;
   z-index: 3;
-  transform: rotate(0deg);
+  transform: none;
 }
 
 .collage-main:hover {
-  transform: rotate(0deg) translateY(-10px);
-  
+  transform: translateY(-5px);
 }
 
 .collage-secondary {
-  position: absolute;
-  top: 0;
-  width: 70%;
-  height: 250px;
-  top: 20px;
-  right: 20px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 220px;
   z-index: 2;
-  transform: rotate(0deg);
+  transform: none;
 }
 
 .collage-secondary:hover {
-  transform: rotate(0deg) translateY(-10px);
+  transform: translateY(-5px);
 }
 
 
