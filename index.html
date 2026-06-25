@@ -49,6 +49,7 @@
               <a href="#hobbies" class="nav-link">Hobbies</a>
               <a href="#skills" class="nav-link">Skills</a>
               <a href="#achievements" class="nav-link">Achievements</a>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false"></button>
             </nav>
 
             <div class="portfolio-section">
@@ -91,7 +92,7 @@
             </div>
 
             <div class="social-links">
-              <a href="https://github.com/Comp-Alex" target="_blank" title="GitHub">
+              <a href="https://github.com/Comp-Alex" target="_blank" title="GitHub" class="github-icon">
                 <svg viewBox="0 0 24 24" fill="#181717" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
@@ -161,8 +162,8 @@
         <h2 class="section-title">About Me</h2>
         <div class="detail-cards">
           <div class="detail-card">
-            <p>I'm <span class="highlight">Alexander John C. Balagso</span>, a <span class="program">BS Computer Engineering</span> student at the University of Batangas.</p>
-            <p style="margin-top: 15px;">I am seeking an On-the-Job Training opportunity to contribute to robotics, networking, and IT support projects while gaining practical experience and preparing for a professional career in technology.</p>
+            <p>I'm <span class="highlight">Alexander John C. Balagso</span>, a <span class="program">BS Computer Engineering</span> student at the University of Batangas with a passion for building innovative solutions across embedded systems, networking, and cybersecurity.</p>
+            <p style="margin-top: 15px;">With hands-on experience in microprocessor architecture, IoT development, robotics, and network infrastructure, I combine theoretical knowledge with practical expertise. I specialize in low-level programming, embedded systems design, and creating intelligent connected devices. My technical foundation spans hardware-software integration, real-time systems, and network protocols, enabling me to tackle complex engineering challenges and deliver scalable solutions.</p>
           </div>
         </div>
       </div>
@@ -181,11 +182,41 @@
             </div>
             <div class="project-details">
               <p><strong>Embedded Systems & Low-Level Programming</strong></p>
-              <p>Explored microprocessor architecture, assembly language programming, and hardware-software integration. Gained hands-on experience with processor emulation and system optimization.</p>
+              <p>I worked on microprocessor architecture and assembly-level programming, building a small emulator and writing firmware that interfaces directly with memory-mapped peripherals. Tasks included instruction sequencing, interrupt handling, and optimizing routines for predictable timing.</p>
+              <p>Through lab exercises and projects I implemented assembly routines, learned pipeline behavior, and troubleshot hardware-software integration issues using logic analyzers and simulators. These experiences strengthened my understanding of how low-level code translates into hardware actions and system performance.</p>
               <div class="project-tags">
                 <span class="tag">Assembly</span>
                 <span class="tag">Embedded Systems</span>
                 <span class="tag">Architecture</span>
+              </div>
+              <div class="project-links">
+                <a class="portfolio-link" href="https://github.com/Comp-Alex/Microprocessor-Lab-Activities" target="_blank" rel="noreferrer">View Microprocessor Repository</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MazeBot Featured Project -->
+        <div class="project-category">
+          <h3 class="project-category-title">MazeBot</h3>
+          <div class="project-container">
+            <div class="project-collage">
+              <video class="collage-img collage-main" autoplay muted loop playsinline controls>
+                <source src="assets/MazebotTL.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="project-details">
+              <p><strong>Robotics & Maze Navigation</strong></p>
+              <p>I built an autonomous maze-solving robot that combines motor control, sensor fusion, and simple pathfinding heuristics to navigate unknown environments. The system uses infrared and ultrasonic sensors for obstacle detection and encoders for distance feedback, enabling reliable movement and turn calculations.</p>
+              <p>The firmware includes state machines for exploration, wall-following behaviors, and recovery logic when the robot encounters unexpected obstacles. Iterative testing in physical mazes improved PID tuning and sensor filtering, increasing completion success and robustness against noisy inputs.</p>
+              <div class="project-tags">
+                <span class="tag">Robotics</span>
+                <span class="tag">Embedded Systems</span>
+                <span class="tag">Maze Solver</span>
+              </div>
+              <div class="project-links">
+                <a class="portfolio-link" href="https://github.com/Comp-Alex/MazeBot-Finals-in-Microprocessor-Lab" target="_blank" rel="noreferrer">View MazeBot Repository</a>
               </div>
             </div>
           </div>
@@ -201,7 +232,8 @@
             </div>
             <div class="project-details">
               <p><strong>Digital Logic & Circuit Design</strong></p>
-              <p>Designed and implemented digital circuits using 24SC components and logic gates. Studied boolean algebra, circuit optimization, and signal processing principles.</p>
+              <p>Designed and implemented a 24-second shot clock using programmable logic, counters, and timing circuits. The project included building the display driver, reset and start controls, and timekeeping logic to maintain accurate countdown operation for game play.</p>
+              <p>Developed the solution by applying boolean algebra, Karnaugh map simplification, and sequential circuit theory. The finished design demonstrates how logic gates, flip-flops, and debounced input switches work together to produce a reliable sport timing system. I also integrated error detection for missed button presses and added a visual status indicator to show active countdown states. This strengthened the design's usability and showed how circuit behavior maps directly to practical user interactions.</p>
               <div class="project-tags">
                 <span class="tag">Digital Logic</span>
                 <span class="tag">Circuit Design</span>
@@ -235,7 +267,10 @@
           <h3 class="project-category-title">Webpage of LabScentique</h3>
           <div class="project-container">
             <div class="project-collage">
-              <img src="assets/LabScentiquePage.png" alt="LabScentique Webpage" class="collage-img collage-main">
+              <video class="collage-img collage-main" autoplay muted loop playsinline controls>
+                <source src="assets/LabScentique.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div class="project-details">
               <p><strong>Full-Stack Web Application</strong></p>
@@ -244,6 +279,35 @@
                 <span class="tag">Web Dev</span>
                 <span class="tag">Full-Stack</span>
                 <span class="tag">UI/UX</span>
+              </div>
+              <div class="project-links">
+                <a class="portfolio-link" href="https://github.com/Comp-Alex/LabScentique" target="_blank" rel="noreferrer">View LabScentique Repository</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAPPA Project -->
+        <div class="project-category">
+          <h3 class="project-category-title">CAPPA — Camera AI Productivity Assistant</h3>
+          <div class="project-container">
+            <div class="project-collage">
+              <video class="collage-img collage-main" autoplay muted loop playsinline controls>
+                <source src="assets/CAPPA.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="project-details">
+              <p><strong>AI-Powered Workspace Assistant</strong></p>
+              <p>Built CAPPA to support productivity with computer vision and focus tracking. The system uses a webcam to analyze presence and activity at the desk, alerting users when they lose concentration or leave their workspace.</p>
+              <p>Core features include distraction detection, presence monitoring, and productivity insights for study and work sessions.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">AI Productivity</span>
+              </div>
+              <div class="project-links">
+                <a class="portfolio-link" href="https://github.com/2320633/Control-System-Camera-AI-Powered-Productivity-Assistant-CAPPA-" target="_blank" rel="noreferrer">View CAPPA on GitHub</a>
               </div>
             </div>
           </div>
@@ -417,21 +481,6 @@
       <div class="certifications-cards">
         <div class="detail-card cert-card">
           <div class="cert-image-wrapper">
-            <img src="assets/CiscoCert.png" alt="Cisco CCNA Certificate" class="cert-image">
-          </div>
-          <div class="cert-card-content">
-            <h3>Cisco CCNA Certification</h3>
-            <p class="cert-summary">Cisco CCNA is a globally recognized networking certification validating knowledge of network fundamentals, IP connectivity, security, and automation. It confirms the ability to install, operate, and troubleshoot medium-sized switched and routed networks.</p>
-            <div class="cert-details">
-              <p><strong>Issuing Organization:</strong> Cisco Networking Academy</p>
-              <p><strong>Date Earned:</strong> January 2026</p>
-              <p><strong>Skills Validated:</strong><br>Network fundamentals • Switching • Routing • VLANs • Network security</p>
-              <p><strong>Validity:</strong><br>Valid until January 2029</p>
-            </div>
-          </div>
-        </div>
-        <div class="detail-card cert-card">
-          <div class="cert-image-wrapper">
             <img src="assets/CPEcert.png" alt="CpElympics 2026 Certificate" class="cert-image">
           </div>
           <div class="cert-card-content">
@@ -472,6 +521,20 @@
               <p><strong>Date Earned:</strong> November 7, 2025</p>
               <p><strong>Event:</strong><br>Batangas AI and Cybersecurity Congress 2025</p>
               <p><strong>Recognition:</strong><br>Participation in AI and cybersecurity conference sessions</p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-card cert-card">
+          <div class="cert-image-wrapper">
+            <img src="assets/DOLEcert.jpg" alt="Occupational Safety and Health Center Certificate" class="cert-image">
+          </div>
+          <div class="cert-card-content">
+            <h3>Occupational Safety and Health Center Certificate</h3>
+            <p class="cert-summary">Certificate awarded for completing Occupational Safety and Health Center training focused on workplace hazard recognition, prevention, and best safety practices.</p>
+            <div class="cert-details">
+              <p><strong>Issuing Organization:</strong> Occupational Safety and Health Center</p>
+              <p><strong>Date Earned:</strong> May 14, 2026</p>
+              <p><strong>Recognition:</strong><br>Completion of workplace safety and hazard prevention training.</p>
             </div>
           </div>
         </div>
@@ -532,6 +595,47 @@
         }
       });
     });
+
+    // Theme toggle: persists in localStorage and respects prefers-color-scheme
+    (function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      if (!themeToggle) return;
+
+      function applyTheme(theme) {
+        if (theme === 'dark') document.body.classList.add('dark');
+        else document.body.classList.remove('dark');
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        updateToggleIcon();
+      }
+
+      const moonSVG = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+      const sunSVG = '<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>';
+
+      function updateToggleIcon() {
+        if (document.body.classList.contains('dark')) {
+          themeToggle.innerHTML = sunSVG;
+          themeToggle.setAttribute('aria-pressed', 'true');
+        } else {
+          themeToggle.innerHTML = moonSVG;
+          themeToggle.setAttribute('aria-pressed', 'false');
+        }
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+        applyTheme(next);
+      });
+
+      // Initialize theme on load
+      let stored = null;
+      try { stored = localStorage.getItem('theme'); } catch (e) { stored = null; }
+      if (stored) {
+        applyTheme(stored);
+      } else {
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+      }
+    })();
   </script>
 </body>
 </html>
