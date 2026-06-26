@@ -3,8 +3,9 @@ assets/*.mp4 filter=lfs diff=lfs merge=lfs -text
 assets/*.mov filter=lfs diff=lfs merge=lfs -text
 assets/*.mkv filter=lfs diff=lfs merge=lfs -text
 assets/*.avi filter=lfs diff=lfs merge=lfs -text
-assets/*.png filter=lfs diff=lfs merge=lfs -text
-assets/*.jpg filter=lfs diff=lfs merge=lfs -text
-assets/*.jpeg filter=lfs diff=lfs merge=lfs -text
-assets/*.gif filter=lfs diff=lfs merge=lfs -text
-assets/*.webp filter=lfs diff=lfs merge=lfs -text
+# Removed image files from Git LFS so the site can deploy real binaries instead of pointers.
+# assets/*.png filter=lfs diff=lfs merge=lfs -text
+# assets/*.jpg filter=lfs diff=lfs merge=lfs -text
+# assets/*.jpeg filter=lfs diff=lfs merge=lfs -text
+# assets/*.gif filter=lfs diff=lfs merge=lfs -text
+# assets/*.webp filter=lfs diff=lfs merge=lfs -text
