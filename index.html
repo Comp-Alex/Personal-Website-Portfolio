@@ -201,8 +201,7 @@
           <h3 class="project-category-title">MazeBot</h3>
           <div class="project-container">
             <div class="project-collage">
-              <video class="collage-img collage-main" preload="metadata" autoplay muted loop playsinline controls>
-                <source src="assets/MazebotTL-compressed.mp4" type="video/mp4">
+              <video class="collage-img collage-main" preload="auto" controls playsinline data-video-src="assets/MazebotTL.mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -267,8 +266,7 @@
           <h3 class="project-category-title">Webpage of LabScentique</h3>
           <div class="project-container">
             <div class="project-collage">
-              <video class="collage-img collage-main" preload="metadata" autoplay muted loop playsinline controls>
-                <source src="assets/LabScentique.mp4" type="video/mp4">
+              <video class="collage-img collage-main" preload="auto" controls playsinline data-video-src="assets/LabScentique-compressed.mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -292,8 +290,7 @@
           <h3 class="project-category-title">CAPPA — Camera AI Productivity Assistant</h3>
           <div class="project-container">
             <div class="project-collage">
-              <video class="collage-img collage-main" preload="metadata" autoplay muted loop playsinline controls>
-                <source src="assets/CAPPA.mp4" type="video/mp4">
+              <video class="collage-img collage-main" preload="auto" controls playsinline data-video-src="assets/CAPPA-compressed.mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -553,6 +550,27 @@
   </div>
 
   <script>
+    async function loadVideoElements() {
+      const videos = document.querySelectorAll('video[data-video-src]');
+
+      for (const video of videos) {
+        const src = video.getAttribute('data-video-src');
+        if (!src) continue;
+
+        try {
+          const response = await fetch(src);
+          if (!response.ok) throw new Error(`Unable to load video: ${response.status}`);
+
+          const blob = await response.blob();
+          const objectUrl = URL.createObjectURL(blob);
+          video.src = objectUrl;
+          video.load();
+        } catch (error) {
+          video.innerHTML = '<p style="margin:0">Video could not be loaded in this preview.</p>';
+        }
+      }
+    }
+
     // Smooth scrolling and active link highlighting for navigation
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('[id]');
@@ -595,6 +613,8 @@
         }
       });
     });
+
+    loadVideoElements();
 
     // Theme toggle: persists in localStorage and respects prefers-color-scheme
     (function() {
