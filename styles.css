@@ -1062,10 +1062,11 @@ footer {
 }
 
 .hero-name {
+  align-self: flex-end;
   margin: 0 0 1.25rem;
   color: var(--accent);
   font-family: 'Trebuchet MS', sans-serif;
-  font-size: 0.8rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1075,7 +1076,7 @@ footer {
   max-width: 940px;
   margin-bottom: 1.5rem;
   color: var(--text);
-  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  font-size: clamp(2.5rem, 4.2vw, 4.6rem);
   line-height: 0.94;
   letter-spacing: -0.045em;
 }
@@ -1158,7 +1159,7 @@ footer {
 @media (max-width: 768px) {
   .hero-profile h1 {
     max-width: 620px;
-    font-size: clamp(2.45rem, 10vw, 4.2rem);
+    font-size: clamp(2.2rem, 8vw, 3.6rem);
   }
 
   .hero-name {
@@ -1653,6 +1654,7 @@ body::before {
 }
 
 .profile-image-wrapper {
+  align-self: flex-end;
   margin-bottom: 2.5rem;
   max-width: none;
 }
@@ -2131,6 +2133,20 @@ footer {
     font-size: clamp(3.4rem, 17vw, 6rem);
   }
 
+  .hero-profile {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profile-image-wrapper {
+    align-self: flex-start;
+  }
+
+  .hero-name {
+    align-self: flex-start;
+    font-size: 0.7rem;
+  }
+
   .top-hero-meta {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -2346,7 +2362,7 @@ footer {
 
 .catalog-heading h2 {
   margin: 0.5rem 0;
-  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-size: clamp(2.2rem, 4.5vw, 4.4rem);
   line-height: 0.95;
   letter-spacing: -0.06em;
 }
