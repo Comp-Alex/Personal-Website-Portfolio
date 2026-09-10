@@ -1637,14 +1637,14 @@ body::before {
   grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: clamp(3rem, 9vw, 9rem);
   align-items: end;
-  min-height: 680px;
+  min-height: 0;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: clamp(3rem, 8vw, 7rem);
 }
 
@@ -1654,7 +1654,7 @@ body::before {
 }
 
 .profile-image-wrapper {
-  align-self: flex-end;
+  align-self: flex-start;
   margin-bottom: 2.5rem;
   max-width: none;
 }
@@ -2966,23 +2966,37 @@ body {
 .hero-profile {
   position: relative;
   max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(150px, 230px) minmax(0, 1fr);
+  column-gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
 }
 
 .hero-name {
-  margin: 0 0 1.25rem;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
   color: var(--accent);
   font-family: 'Trebuchet MS', sans-serif;
-  font-size: 0.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.7rem);
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
+.profile-image-wrapper {
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 0;
+}
+
 .hero-profile h1 {
+  grid-column: 1 / -1;
+  grid-row: 2;
   max-width: 940px;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0 1.5rem;
   color: var(--text);
-  font-size: clamp(3.1rem, 6.2vw, 7.2rem);
+  font-size: clamp(2.2rem, 4vw, 4rem);
   line-height: 0.94;
   letter-spacing: -0.045em;
 }
@@ -2992,6 +3006,7 @@ body {
 }
 
 .availability {
+  grid-column: 1 / -1;
   max-width: 650px;
   margin: 0 0 2.5rem;
   padding: 0.9rem 1.1rem;
@@ -3006,6 +3021,7 @@ body {
 }
 
 .top-hero-meta {
+  grid-column: 1 / -1;
   max-width: 940px;
   gap: clamp(1.5rem, 4vw, 4rem);
 }
@@ -3068,11 +3084,30 @@ body {
   }
 
   .hero-profile h1 {
+    grid-column: auto;
+    grid-row: auto;
     max-width: 620px;
-    font-size: clamp(2.8rem, 12vw, 5rem);
+    margin-top: 0;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .profile-image-wrapper {
+    grid-column: auto;
+    grid-row: auto;
+    margin-bottom: 2.5rem;
   }
 
   .hero-name {
+    grid-column: auto;
+    grid-row: auto;
+    margin: 0 0 1.25rem;
     font-size: 0.7rem;
   }
 
@@ -3103,8 +3138,8 @@ body:not(.dark) #hobbies {
 
 .profile-image-wrapper .theme-control {
   position: absolute;
-  right: -1.1rem;
-  bottom: -1.1rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
   z-index: 3;
 }
 
@@ -3133,8 +3168,8 @@ body.dark .hero-info .social-links a {
 
 @media (max-width: 768px) {
   .profile-image-wrapper .theme-control {
-    right: -0.7rem;
-    bottom: -0.7rem;
+    right: 0.35rem;
+    bottom: 0.35rem;
   }
 
   .profile-image-wrapper .theme-toggle {
