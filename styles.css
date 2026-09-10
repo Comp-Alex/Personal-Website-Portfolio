@@ -1075,7 +1075,7 @@ footer {
   max-width: 940px;
   margin-bottom: 1.5rem;
   color: var(--text);
-  font-size: clamp(3.1rem, 6.2vw, 7.2rem);
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
   line-height: 0.94;
   letter-spacing: -0.045em;
 }
@@ -1158,7 +1158,7 @@ footer {
 @media (max-width: 768px) {
   .hero-profile h1 {
     max-width: 620px;
-    font-size: clamp(2.8rem, 12vw, 5rem);
+    font-size: clamp(2.45rem, 10vw, 4.2rem);
   }
 
   .hero-name {
