@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander John C. Balagso - Portfolio</title>
+  <meta name="description" content="Portfolio of Alexander John C. Balagso, a Computer Engineering student building practical embedded, robotics, web, and IT systems.">
+  <meta name="theme-color" content="#f6f8fa">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,40 +21,33 @@
                 <img src="assets/Profile.jpg" alt="Profile">
               </div>
               <div class="theme-control">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode"></button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Switch to personal dark mode" aria-pressed="false" title="Switch to personal dark mode"></button>
               </div>
             </div>
             <p class="hero-name">Alexander John C. Balagso</p>
-            <h1 class="hero-title">Computer Engineering <span>|</span> Building Practical Hardware, Software &amp; IoT Systems.</h1>
-            <div class="availability"><span class="availability-dot" aria-hidden="true"></span>Seeking Internships &amp; Collaborations in Web Dev, IoT, and Robotics.</div>
+            <h1 class="hero-title">Every lesson builds the system that moves us forward</h1>
+            <p class="hero-summary">Every failure is a test, every attempt is a design, every success is a step forward</p>
+            <div class="availability"><span class="availability-dot" aria-hidden="true"></span>Open to cybersecurity, AI development, embedded systems, and applied engineering opportunities.</div>
+            <div class="hero-actions">
+              <a class="hero-action hero-action-primary" href="#catalog">Explore my work <span aria-hidden="true">↘</span></a>
+              <a class="hero-action" href="#contact">Start a conversation <span aria-hidden="true">↘</span></a>
+            </div>
             <div class="top-hero-meta">
               <div class="hire-section">
                 <div class="info-label">Hire For</div>
                 <div class="tag-list">
-                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">&lt;/&gt;</span>Web Development</div>
-                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">◉</span>IoT</div>
-                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">⌁</span>Robotics</div>
                   <div class="hire-tag"><span class="capability-icon" aria-hidden="true">◈</span>Cybersecurity</div>
-                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">⚙</span>Arduino</div>
-                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">⌘</span>Local IT</div>
-                </div>
-              </div>
-              <div class="brief-skills">
-                <div class="info-label">Skills</div>
-                <div class="skill-list">
-                  <span><b aria-hidden="true">&lt;/&gt;</b>HTML</span>
-                  <span><b aria-hidden="true">#</b>CSS</span>
-                  <span><b aria-hidden="true">JS</b>JavaScript</span>
-                  <span><b aria-hidden="true">&lt;?&gt;</b>PHP</span>
-                  <span><b aria-hidden="true">⌁</b>Embedded Systems</span>
-                  <span><b aria-hidden="true">◉</b>Robotics</span>
-                  <span><b aria-hidden="true">✦</b>AI Training</span>
+                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">✦</span>AI Development</div>
+                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">⌁</span>Embedded Systems</div>
+                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">&lt;/&gt;</span>Web Development</div>
+                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">⌘</span>IT Support</div>
+                  <div class="hire-tag"><span class="capability-icon" aria-hidden="true">◉</span>Computer Vision &amp; IoT</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="hero-info">
+          <div class="hero-info" id="contact">
             <div class="profile-info-row">
               <div class="info-block">
                 <div class="info-label">Email</div>
@@ -167,29 +162,57 @@
       <section class="content-catalog" id="catalog" aria-labelledby="catalog-title">
         <div class="catalog-heading">
           <span class="catalog-kicker">Portfolio index</span>
-          <h2 id="catalog-title">Discover my work</h2>
-          <p>Choose a section to explore the details.</p>
+          <h2 id="catalog-title">Cybersecurity, AI, and embedded systems in practice.</h2>
+          <p>Explore the work behind my learning: computer vision, network foundations, software projects, microprocessor programming, robotics, and enterprise IT support.</p>
         </div>
         <div class="folder-grid">
           <button class="folder-card folder-card-featured" type="button" data-folder="aboutme"><span class="folder-tab">01</span><span class="folder-icon" aria-hidden="true">▱</span><strong>About Me</strong><small>Profile and approach</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
-          <button class="folder-card" type="button" data-folder="projects"><span class="folder-tab">02</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Projects</strong><small>Systems, robotics, and AI</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
-          <button class="folder-card" type="button" data-folder="internship"><span class="folder-tab">03</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Internship Experience</strong><small>IT support and infrastructure</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card" type="button" data-folder="projects"><span class="folder-tab">02</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Projects</strong><small>Cybersecurity, AI, and embedded systems</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card" type="button" data-folder="internship"><span class="folder-tab">03</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Experience</strong><small>IT support and infrastructure</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
           <button class="folder-card" type="button" data-folder="education"><span class="folder-tab">04</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Education</strong><small>Academic foundation</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
           <button class="folder-card" type="button" data-folder="hobbies"><span class="folder-tab">05</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Hobbies</strong><small>Games, music, and novels</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
-          <button class="folder-card" type="button" data-folder="skills"><span class="folder-tab">06</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Skills</strong><small>Tools and technologies</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
-          <button class="folder-card" type="button" data-folder="achievements"><span class="folder-tab">07</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Achievements</strong><small>Milestones and recognition</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
-          <button class="folder-card" type="button" data-folder="certifications"><span class="folder-tab">08</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Certifications</strong><small>Credentials and badges</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card personal-folder-card" type="button" data-folder="personal"><span class="folder-tab">06</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Personal Life</strong><small>Milestones, interests, and growth</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card" type="button" data-folder="skills"><span class="folder-tab">07</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Skills</strong><small>Security, AI, and engineering tools</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card" type="button" data-folder="achievements"><span class="folder-tab">08</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Achievements</strong><small>Milestones and recognition</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
+          <button class="folder-card" type="button" data-folder="certifications"><span class="folder-tab">09</span><span class="folder-icon" aria-hidden="true">▱</span><strong>Certifications</strong><small>Credentials and badges</small><span class="folder-open" aria-hidden="true">Open ↗</span></button>
         </div>
       </section>
 
       <!-- About Me Section -->
       <div class="detail-section" id="aboutme">
-        <h2 class="section-title">About Me</h2>
+          <h2 class="section-title">About Me</h2>
         <div class="detail-cards">
           <div class="detail-card">
-            <p>I'm <span class="highlight">Alexander John C. Balagso</span>, a <span class="program">BS Computer Engineering</span> student at the University of Batangas with a passion for building innovative solutions across embedded systems, networking, and cybersecurity.</p>
-            <p style="margin-top: 15px;">With hands-on experience in microprocessor architecture, IoT development, robotics, and network infrastructure, I combine theoretical knowledge with practical expertise. I specialize in low-level programming, embedded systems design, and creating intelligent connected devices. My technical foundation spans hardware-software integration, real-time systems, and network protocols, enabling me to tackle complex engineering challenges and deliver scalable solutions.</p>
-            <p style="margin-top: 15px;">During my internship with the ZAMA PH IT Department, I extended that foundation into enterprise IT support by handling Ticket System requests, user access, device deployment, network troubleshooting, and technical documentation across departments.</p>
+            <p>I'm <span class="highlight">Alexander John C. Balagso</span>, a <span class="program">BS Computer Engineering</span> student at the University of Batangas building toward a career in cybersecurity and AI development.</p>
+            <p style="margin-top: 15px;">I enjoy understanding how systems work under the hood, finding where they can fail, and building tools that make them more useful and resilient. My current focus includes computer vision, AI-assisted applications, embedded systems, networking, security fundamentals, and software that connects reliably to the real world.</p>
+            <p style="margin-top: 15px;">My internship with the ZAMA PH IT Department strengthened that direction through enterprise support, user access, device deployment, network troubleshooting, security-related tools, and technical documentation across departments.</p>
+            <div class="personal-about">
+              <span class="personal-about-label">Personal note</span>
+              <p>Outside of technical work, I enjoy online games, music, and novels. They give me space to reset, stay curious, and notice how people build worlds, solve problems, and tell stories.</p>
+              <p>I tend to learn by taking things apart, asking why they work, and trying to make the next version better. That mindset is what keeps me moving between code, hardware, security, and AI.</p>
+              <div class="personal-folder-grid">
+                <div class="personal-folder">
+                  <span class="personal-folder-tab">01 · DRIVE</span>
+                  <h3>What drives me</h3>
+                  <p>I like the moment an idea becomes something real, testable, and useful to another person.</p>
+                </div>
+                <div class="personal-folder">
+                  <span class="personal-folder-tab">02 · PROCESS</span>
+                  <h3>How I learn</h3>
+                  <p>I learn through hands-on experiments, troubleshooting, documentation, and improving a project one version at a time.</p>
+                </div>
+                <div class="personal-folder">
+                  <span class="personal-folder-tab">03 · VALUES</span>
+                  <h3>What I value</h3>
+                  <p>Curiosity, patience, clear communication, and building technology that is dependable rather than impressive only on the surface.</p>
+                </div>
+                <div class="personal-folder">
+                  <span class="personal-folder-tab">04 · NEXT</span>
+                  <h3>Looking ahead</h3>
+                  <p>I want to grow into an engineer who can make intelligent systems more secure, useful, and understandable.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -332,9 +355,9 @@
         </div>
       </div>
 
-      <!-- Internship Experience Section -->
+      <!-- Experience Section -->
       <div class="detail-section" id="internship">
-        <h2 class="section-title">Internship Experience</h2>
+        <h2 class="section-title">Experience</h2>
         <div class="detail-cards internship-cards">
           <div class="detail-card internship-overview">
             <span class="internship-eyebrow">Professional experience</span>
@@ -496,6 +519,33 @@
             </figure>
           </div>
           <p>I'm passionate about reading novels across different genres. It helps me expand my imagination and gain new perspectives on life and technology.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Life Section -->
+    <div class="detail-section" id="personal">
+      <h2 class="section-title">Personal Life</h2>
+      <div class="detail-cards personal-life-cards">
+        <div class="detail-card">
+          <h3>Personal Milestones</h3>
+          <p>Earned a municipal full scholarship, completed an IT internship, and continued building a technical foundation through Computer Engineering projects.</p>
+          <div class="detail-label"><strong>Direction:</strong><br>Growing through consistent study, practice, and real-world experience.</div>
+        </div>
+        <div class="detail-card">
+          <h3>Community &amp; Competition</h3>
+          <p>Organized community gaming tournaments and developed an appreciation for teamwork, fair play, communication, and creating enjoyable experiences for others.</p>
+          <div class="detail-label"><strong>Learned:</strong><br>Leadership, coordination, responsibility, and problem-solving under pressure.</div>
+        </div>
+        <div class="detail-card">
+          <h3>Life Outside Technology</h3>
+          <p>Before focusing more deeply on technology, I enjoyed cycling, running, and hanging out with friends. I still value those experiences because they taught me to stay active, make time for people, and keep a healthy balance outside of school and projects.</p>
+          <div class="detail-label"><strong>Personal balance:</strong><br>Movement, friendship, curiosity, creativity, and steady progress.</div>
+        </div>
+        <div class="detail-card">
+          <h3>Currently Growing</h3>
+          <p>I'm continuing to develop toward cybersecurity, AI development, and embedded systems while looking for opportunities to learn from experienced teams.</p>
+          <div class="detail-label"><strong>Next step:</strong><br>Build more secure, intelligent, and useful systems.</div>
         </div>
       </div>
     </div>
@@ -698,6 +748,7 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
+        <div>Let’s build something useful.</div>
         <div>© 2026 Alexander John C. Balagso</div>
         <div>BS Computer Engineering | University of Batangas</div>
       </div>
@@ -886,9 +937,13 @@
         if (document.body.classList.contains('dark')) {
           themeToggle.innerHTML = sunSVG;
           themeToggle.setAttribute('aria-pressed', 'true');
+          themeToggle.setAttribute('aria-label', 'Switch to professional light mode');
+          themeToggle.setAttribute('title', 'Switch to professional light mode');
         } else {
           themeToggle.innerHTML = moonSVG;
           themeToggle.setAttribute('aria-pressed', 'false');
+          themeToggle.setAttribute('aria-label', 'Switch to personal dark mode');
+          themeToggle.setAttribute('title', 'Switch to personal dark mode');
         }
       }
 

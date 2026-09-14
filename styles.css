@@ -1562,39 +1562,43 @@ footer {
   }
 }
 
-/* Editorial portfolio refresh: keeps the existing content and interactions intact. */
+/* Light mode is the professional presentation; dark mode reveals the more personal view. */
 :root {
-  --bg: #f4f0e8;
-  --surface: #fffdf8;
-  --surface-elevated: #f8f3ea;
-  --surface-muted: #ebe4d8;
-  --text: #1d211d;
-  --muted: #d9d1c4;
-  --muted-text: #667066;
-  --accent: #2f6f52;
-  --accent-muted: #cfe1d5;
-  --accent-line: #2f6f52;
-  --shadow: rgba(39, 32, 22, 0.12);
-  --shadow-strong: rgba(39, 32, 22, 0.08);
+  --bg: #f5f7f9;
+  --surface: #ffffff;
+  --surface-elevated: #eef3f6;
+  --surface-muted: #e5ebef;
+  --text: #17212b;
+  --muted: #d5dde3;
+  --muted-text: #53616d;
+  --accent: #155d3f;
+  --accent-muted: #d7e8df;
+  --accent-line: #155d3f;
+  --shadow: rgba(23, 33, 43, 0.1);
+  --shadow-strong: rgba(23, 33, 43, 0.16);
 }
 
 body.dark {
-  --bg: #171a17;
-  --surface: #20241f;
-  --surface-elevated: #292e28;
-  --surface-muted: #30362f;
-  --text: #f4f0e8;
-  --muted: #414a40;
-  --muted-text: #b6c0b4;
+  --bg: #171512;
+  --surface: #211e1a;
+  --surface-elevated: #2b2721;
+  --surface-muted: #363027;
+  --text: #f4efe5;
+  --muted: #51483c;
+  --muted-text: #c3b9a9;
   --accent: #8bc49a;
-  --accent-muted: #244b36;
+  --accent-muted: #294334;
   --accent-line: #8bc49a;
 }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
   background: var(--bg);
   line-height: 1.55;
+}
+
+body.dark {
+  font-family: Georgia, 'Times New Roman', serif;
 }
 
 body::before {
@@ -1606,6 +1610,71 @@ body::before {
   background-image: radial-gradient(rgba(29, 33, 29, 0.08) 0.7px, transparent 0.7px);
   background-size: 9px 9px;
   z-index: -1;
+}
+
+.hero-kicker {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hero-summary {
+  grid-column: 1 / -1;
+  max-width: 940px;
+  margin: -0.5rem 0 1.5rem;
+  color: var(--muted-text);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 2.5rem;
+}
+
+.hero-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.9rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--accent-line);
+  color: var(--text);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.hero-action:hover,
+.hero-action:focus-visible {
+  background: var(--surface-elevated);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.hero-action-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.hero-action-primary:hover,
+.hero-action-primary:focus-visible {
+  background: var(--text);
+  color: var(--bg);
+}
+
+body.dark .hero-action-primary {
+  color: #07101a;
 }
 
 .container,
@@ -1705,7 +1774,7 @@ body::before {
 
 .top-hero-meta {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.8fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   width: 100%;
   max-width: 850px;
@@ -2734,11 +2803,6 @@ body::before {
     grid-column: span 2;
   }
 
-  body.dark .folder-card[data-folder="certifications"] {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: calc(50% - 0.5rem);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3126,8 +3190,14 @@ body {
 
 /* Hobbies are part of the dark-theme presentation only. */
 body:not(.dark) [data-folder="hobbies"],
-body:not(.dark) #hobbies {
+body:not(.dark) #hobbies,
+body:not(.dark) [data-folder="personal"],
+body:not(.dark) #personal {
   display: none;
+}
+
+.personal-folder-card::before {
+  background: var(--accent);
 }
 
 /* Keep the theme switch attached to the profile frame. */
@@ -3159,6 +3229,96 @@ body:not(.dark) #hobbies {
 body.dark .hero-info .portfolio-link,
 body.dark .hero-info .social-links a {
   border-color: transparent;
+}
+
+.personal-about {
+  display: none;
+}
+
+body.dark .personal-about {
+  display: block;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--muted);
+  color: var(--muted-text);
+}
+
+.personal-about p + p {
+  margin-top: 0.9rem;
+}
+
+.personal-about-label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.personal-folder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.personal-folder {
+  position: relative;
+  min-height: 145px;
+  padding: 1rem;
+  background: var(--surface-elevated);
+  border: 1px solid var(--muted);
+  transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+}
+
+.personal-folder::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 42%;
+  height: 0.3rem;
+  background: var(--accent);
+}
+
+.personal-folder:hover {
+  background: var(--accent-muted);
+  border-color: var(--accent);
+  transform: translateY(-3px) rotate(-0.5deg);
+}
+
+.personal-folder:nth-child(2n):hover {
+  transform: translateY(-3px) rotate(0.5deg);
+}
+
+.personal-folder-tab {
+  display: block;
+  margin-bottom: 1.1rem;
+  color: var(--accent);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.personal-folder h3 {
+  margin-bottom: 0.35rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.personal-folder p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 620px) {
+  .personal-folder-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .profile-image-wrapper .theme-toggle:hover {
