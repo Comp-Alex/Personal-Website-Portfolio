@@ -19,6 +19,9 @@
   --shadow: rgba(15,23,32,0.06);
   --shadow-strong: rgba(0,0,0,0.08);
   --accent-line: rgba(21,93,63,0.14);
+  --cursor-dot-size: 5px;
+  --cursor-color: rgba(21, 93, 63, 0.96);
+  --cursor-glow: rgba(21, 93, 63, 0.18);
 }
 
 /* Dark mode overrides applied when `body` has the `dark` class */
@@ -79,6 +82,72 @@ body {
   margin: 0;
   font-size: 16px;
   line-height: 1.6;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  [role="button"],
+  .folder-card,
+  .portfolio-link,
+  .hero-action,
+  .theme-toggle,
+  .profile-image,
+  .social-links a {
+    cursor: none !important;
+  }
+}
+
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 180ms ease, width 180ms ease, height 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.cursor-dot {
+  width: var(--cursor-dot-size);
+  height: var(--cursor-dot-size);
+  border-radius: 50%;
+  background: var(--cursor-color);
+  box-shadow: 0 0 12px var(--cursor-glow);
+}
+
+.cursor-ring {
+  display: none !important;
+}
+
+body.cursor-enabled .cursor {
+  opacity: 1;
+}
+
+body.cursor-enabled .cursor-dot.cursor--active,
+body.cursor-enabled .cursor-dot.cursor--hover {
+  width: 7px;
+  height: 7px;
+  box-shadow: 0 0 16px rgba(21, 93, 63, 0.24);
+}
+
+
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
 }
 
 /* Animations */

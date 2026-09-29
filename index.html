@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="cursor cursor-dot" aria-hidden="true"></div>
+  <div class="cursor cursor-ring" aria-hidden="true"></div>
+
   <div class="container">
     <!-- Main Content -->
     <div class="main-content">
@@ -757,6 +760,47 @@
   </div>
 
   <script>
+    const cursorDot = document.querySelector('.cursor-dot');
+    const pointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    if (cursorDot && pointerQuery.matches) {
+      document.body.classList.add('cursor-enabled');
+
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+
+      const moveCursor = () => {
+        const hoverScale = cursorDot.classList.contains('cursor--hover') ? 1.5 : 1;
+        const activeScale = cursorDot.classList.contains('cursor--active') ? 1.25 : 1;
+        const scale = hoverScale * activeScale;
+
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${scale})`;
+        requestAnimationFrame(moveCursor);
+      };
+
+      document.addEventListener('pointermove', event => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+      });
+
+      document.addEventListener('pointerdown', () => cursorDot.classList.add('cursor--active'));
+      document.addEventListener('pointerup', () => cursorDot.classList.remove('cursor--active'));
+      document.addEventListener('pointerleave', () => {
+        cursorDot.style.opacity = '0';
+      });
+      document.addEventListener('pointerenter', () => {
+        cursorDot.style.opacity = '1';
+      });
+
+      document.querySelectorAll('a, button, .folder-card, .profile-image, .portfolio-link, .hero-action, .theme-toggle, .social-links a').forEach(element => {
+        element.addEventListener('mouseenter', () => cursorDot.classList.add('cursor--hover'));
+        element.addEventListener('mouseleave', () => cursorDot.classList.remove('cursor--hover'));
+      });
+
+      cursorDot.style.opacity = '1';
+      requestAnimationFrame(moveCursor);
+    }
+
     // Open each portfolio section as a folder-like detail view.
     const navLinks = document.querySelectorAll('.nav-link');
     const detailSections = document.querySelectorAll('.detail-section');
