@@ -1,0 +1,72 @@
+{
+  "repository": {
+    "owner": "Comp-Alex",
+    "name": "Personal-Website-Portfolio",
+    "profile_url": "https://github.com/Comp-Alex",
+    "website_url": "https://personal-website-portfolio.vercel.app"
+  },
+  "owner": {
+    "name": "Alexander John C. Balagso",
+    "description": "Computer Engineering student building practical cybersecurity, AI, embedded, robotics, and web systems."
+  },
+  "api_timeout_seconds": 15,
+  "recent_commit_limit": 5,
+  "technologies": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "GitHub Actions",
+    "Git LFS",
+    "Vercel"
+  ],
+  "roadmap": [
+    {
+      "title": "Build the portfolio foundation",
+      "description": "Publish the core portfolio experience and navigation.",
+      "status": "completed"
+    },
+    {
+      "title": "Showcase engineering work and experience",
+      "description": "Document projects, skills, education, experience, and certifications.",
+      "status": "completed"
+    },
+    {
+      "title": "Automate the engineering dashboard",
+      "description": "Generate repository metrics and portfolio status on a schedule.",
+      "status": "completed"
+    },
+    {
+      "title": "Review accessibility and performance",
+      "description": "Audit keyboard access, responsive behavior, and page performance.",
+      "status": "planned"
+    },
+    {
+      "title": "Add portfolio analytics",
+      "description": "Choose a privacy-conscious way to understand portfolio engagement.",
+      "status": "planned"
+    }
+  ],
+  "milestones": [
+    {
+      "title": "Engineering portfolio published",
+      "description": "A static portfolio presents projects, education, skills, and professional experience.",
+      "status": "completed"
+    },
+    {
+      "title": "CAPPA project showcased",
+      "description": "Documented the computer-vision productivity assistant and its project repository.",
+      "status": "completed"
+    },
+    {
+      "title": "Enterprise IT internship documented",
+      "description": "Added practical support, infrastructure, security, and documentation experience.",
+      "status": "completed"
+    },
+    {
+      "title": "Automated dashboard added",
+      "description": "Scheduled GitHub Actions now refresh repository activity and portfolio status.",
+      "status": "completed"
+    }
+  ]
+}

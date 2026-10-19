@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102820"/>
+      <stop offset="1" stop-color="#123F36"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="80" y1="56" x2="1050" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9BE6B0"/>
+      <stop offset="1" stop-color="#54B88A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="250" rx="24" fill="url(#background)"/>
+  <path d="M0 200 260 90l175 82 196-112 220 116 180-90 169 92v72H0v-50Z" fill="#174738" opacity=".48"/>
+  <path d="m810 250 113-94 74 35 98-111 105 68v102H810Z" fill="#21614A" opacity=".48"/>
+  <g stroke="url(#accent)" stroke-width="2" opacity=".9">
+    <path d="M760 58h54v45h55v-32h58v61h52"/>
+    <path d="M814 58v-18h39v31M927 71V42h45"/>
+    <circle cx="760" cy="58" r="5" fill="#9BE6B0"/>
+    <circle cx="979" cy="132" r="5" fill="#9BE6B0"/>
+    <circle cx="972" cy="42" r="5" fill="#9BE6B0"/>
+  </g>
+  <g fill="#C1F3CD" opacity=".75">
+    <circle cx="1068" cy="51" r="3"/>
+    <circle cx="1101" cy="86" r="2"/>
+    <circle cx="1041" cy="107" r="2"/>
+    <circle cx="719" cy="174" r="2"/>
+    <circle cx="744" cy="198" r="3"/>
+  </g>
+  <text x="72" y="105" fill="#B9EAC7" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4">ENGINEERING PORTFOLIO</text>
+  <text x="68" y="164" fill="#F4FBF5" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Building practical systems.</text>
+  <text x="72" y="198" fill="#B9CFC2" font-family="Segoe UI, Arial, sans-serif" font-size="17">Cybersecurity · AI · Embedded engineering · Web</text>
+</svg>
