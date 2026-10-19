@@ -45,11 +45,11 @@
 
 | Commit | Message | Author | Date (UTC) |
 |:--|:--|:--|:--|
+| [`ef70cbf`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/ef70cbfecbcd4521964c42196cbec38ffc2eb5a3) | Add automated portfolio dashboard | Comp-Alex | 2026-10-19 |
 | [`e8e4923`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/e8e492358616378d4d7d0eeeea6c715e723a151f) | Add cursor | Comp-Alex | 2026-09-29 |
 | [`ebdb47c`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/ebdb47c3e386946dce8fe955eb2fa76e3bf97fec) | Refresh portfolio branding and sections | Comp-Alex | 2026-09-14 |
 | [`f3ed6cf`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/f3ed6cfe7900c09dfb175d200e49f6cd2cc48136) | Minor Adjustment | Comp-Alex | 2026-09-10 |
 | [`ae451c8`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/ae451c827d4c37e41c72076f3cbaf2561799b8ec) | Re-align | Comp-Alex | 2026-09-10 |
-| [`2e8bb6c`](https://github.com/Comp-Alex/Personal-Website-Portfolio/commit/2e8bb6cc2fcdf2ef684f908ff28660079c076e0d) | small Adjustments | Comp-Alex | 2026-09-10 |
 
 ---
 
